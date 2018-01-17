@@ -1,21 +1,26 @@
 body {
       background: ghostwhite; }
     
-    .navbar {
-      border-bottom: #ff4955 2.5px solid; }
-      .navbar img {
-        width: 140px; }
+.navbar {
+  border-bottom: #ff4955 2.5px solid; }
+  .navbar img {
+    width: 140px; }
+
+#show {
+  position: relative;
+  background: url("../img/bg.png") no-repeat;
+  overflow: hidden;
+  min-height: 750px;
+  background-attachment: fixed; }
+  #show .overlay {
+    background: rgba(17, 17, 16, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
     
-    #show {
-      position: relative;
-      background: url("../img/bg.png") no-repeat;
-      overflow: hidden;
-      min-height: 750px;
-      background-attachment: fixed; }
-      #show .overlay {
-        background: rgba(17, 17, 16, 0.8);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
+#boxes {
+    margin-bottom: 60px; }
+    #boxes .card {
+      height: 100%; }
