@@ -40,3 +40,29 @@ body {
       color: #e95935; }
     #service .service-info h4 {
       margin-bottom: 12px; }
+
+
+#team h1 {
+    color: #4FA4EF; }
+
+  #team .card {
+    height: 100%; }
+  
+  #team .out img {
+    margin-top: -50px; }
+  
+  #team .fa {
+    font-size: 25px;
+    color: #4FA4EF; }
+  
+  #team .inner img {
+    height: 25px; }
+  
+  #team .card:hover {
+    background: #4FA4EF; }
+    #team .card:hover .fa {
+      color: #d6dfe7; }
+  
+  #team .mem {
+    text-align: center; }
+
