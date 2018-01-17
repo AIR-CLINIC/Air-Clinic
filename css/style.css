@@ -1,5 +1,7 @@
 body {
-      background: ghostwhite; }
+      background: ghostwhite; 
+      
+    }
     
 .navbar {
   border-bottom: #ff4955 2.5px solid; }
@@ -11,7 +13,9 @@ body {
   background: url("../img/bg.png") no-repeat;
   overflow: hidden;
   min-height: 750px;
-  background-attachment: fixed; }
+  background-attachment: fixed; 
+
+}
   #show .overlay {
     background: rgba(17, 17, 16, 0.8);
     position: absolute;
@@ -26,24 +30,18 @@ body {
       height: 100%; }
 
 #service {
-    background: #f8d1d1;
+    background: rgba(247, 15, 38, 0.295);
     margin-top: -2rem; }
-    #service hr {
-      height: 3px;
-      width: 60px;
-      background: #ffb737;
-      border: 0;
-      margin: 20px 0 20px 0; }
     #service i {
       font-size: 50px;
       margin-bottom: 10px;
-      color: #e95935; }
+      color: #f01a1a; }
     #service .service-info h4 {
       margin-bottom: 12px; }
 
 
 #team h1 {
-    color: #4FA4EF; }
+    color: rgb(38, 39, 39); }
 
   #team .card {
     height: 100%; }
@@ -76,3 +74,17 @@ body {
   #main-footer a {
     color: rgba(250, 245, 245, 0.801);}
 
+#page-header {
+  height: 200px;
+  background: url("../img/chain.jpeg") no-repeat;
+  background-position: 0 -360px;
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px; }
+
+  
+#team-list i{
+  font-size: 13px;
+  color: #f58990
+}
