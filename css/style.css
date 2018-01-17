@@ -24,3 +24,19 @@ body {
     margin-bottom: 60px; }
     #boxes .card {
       height: 100%; }
+
+#service {
+    background: #f8d1d1;
+    margin-top: -2rem; }
+    #service hr {
+      height: 3px;
+      width: 60px;
+      background: #ffb737;
+      border: 0;
+      margin: 20px 0 20px 0; }
+    #service i {
+      font-size: 50px;
+      margin-bottom: 10px;
+      color: #e95935; }
+    #service .service-info h4 {
+      margin-bottom: 12px; }
