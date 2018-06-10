@@ -6,9 +6,9 @@
 
 if(isset($_POST['email']))
 {
-$email_to = "mail@airclinic.co"; 
+$email_to = "airsteemclinic@gmail.com"; 
 $email_from = $_POST['email']; // must be different than $email_from 
-$email_subject = 'Query Mail From Airclinic.co';
+$email_subject = 'Suggestion Box From $name';
 
     function return_error($error)
     {
