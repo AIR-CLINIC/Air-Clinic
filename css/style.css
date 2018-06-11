@@ -1,90 +1,141 @@
-body {
-      background: ghostwhite; 
-      
+.nav {
+    background-image: url("http://ezinearticlesbase.com/wp-content/uploads/2017/12/sermo_photo.jpg");
+    background-size: 100% 20rem;
+    border: solid 7px rgb(221, 17, 17);
+    border-radius: 5px;
+}
+
+
+h3 {
+    font-size: 1.70rem;
+    color: rgb(228, 18, 18);
+    background-color: lightgrey;
+    width: 14rem;
+    text-align: left;
+    padding: 6px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
     }
-    
-.navbar {
-  border-bottom: #ff4955 2.5px solid; }
-  .navbar img {
-    width: 140px; }
 
-#show {
-  position: relative;
-  background: url("../img/bg.png") no-repeat;
-  overflow: hidden;
-  min-height: 750px;
-  background-attachment: fixed; 
+li a {
+    display: block;
+    width: 35%;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(3, 127, 250);;
+    border: 1px solid white;
+    padding: 1px;
+    color: white;
+    border-radius: 20%;
 
 }
-  #show .overlay {
-    background: rgba(17, 17, 16, 0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
+
+a:hover {
+    color: dodgerblue;
+    background-color: lightgrey;
+    border: solid 1px black;
+}
+
+a:active {
+    color: dodgerblue;
+    background-color: lightgrey;
+    border: solid 1px black;
+}
+
+.active {
+    background-color: rgb(3, 127, 250);
+    border: 1px solid rgb(250, 6, 6);
+    color: white;
+    
+}
+
+/* Arrow Bounce */
+@bg: #2d2d37; // Dark blue
+@primary: #fd6b21; // Orange
+
+body { background: @bg;}
+a { color: rgb(221, 14, 14); text-decoration: none; }
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.arrow-bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Contents */
+
+.contents {
+    background-color: grey;
     width: 100%;
-    height: 100%; }
-    
-#boxes {
-    margin-bottom: 60px; }
-    #boxes .card {
-      height: 100%; }
+    height: 20%;
+    color: white;
+    margin-top: 0%;
+    border: solid rgb(3, 127, 250) 2px;
+    outline: solid rgb(3, 127, 250) 10%;
+    outline-offset: 10%;
+    border-radius: 5px;
 
-#service {
-    background: rgba(247, 15, 38, 0.295);
-    margin-top: -2rem; }
-    #service i {
-      font-size: 50px;
-      margin-bottom: 10px;
-      color: #f01a1a; }
-    #service .service-info h4 {
-      margin-bottom: 12px; }
-
-
-#team h1 {
-    color: rgb(38, 39, 39); }
-
-  #team .card {
-    height: 100%; }
-  
-  #team .out img {
-    margin-top: -50px; }
-  
-  #team .fa {
-    font-size: 25px;
-    color: #4FA4EF; }
-  
-  #team .inner img {
-    height: 25px; }
-  
-  #team .card:hover {
-    background: #4FA4EF; }
-    #team .card:hover .fa {
-      color: #d6dfe7; }
-  
-  #team .mem {
-    text-align: center; }
-
-
-#contact {
 
 }
-  #contact a {
-    color: rgba(250, 245, 245, 0.801); }
 
-  #main-footer a {
-    color: rgba(250, 245, 245, 0.801);}
+h1 {
+    background-color: rgb(3, 127, 250);
+    display: flex;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
 
-#page-header {
-  height: 200px;
-  background: url("../img/chain.jpeg") no-repeat;
-  background-position: 0 -360px;
-  background-attachment: fixed;
-  color: #fff;
-  border-bottom: 1px #eee solid;
-  padding-top: 50px; }
 
-  
-#team-list i{
-  font-size: 13px;
-  color: #f58990
+/* Container */
+#about {
+    border: rgb(219, 10, 10) 2px solid;
+}
+
+span {
+    background-color: rgb(3, 127, 250);
+    border: whitesmoke 2px outset;
+}
+
+
+h4 {
+    background-color: dodgerblue;
+    width: 50%;
+    text-align: center;
+    padding: 5%;
+    font-size: 1rem;
+}
+
+#services {
+    background-color: grey;
+}
+
+
+/* Footer Details */
+.fas fa-camera-retro {
+    color: grey;
+    font-size: 3em; 
 }
