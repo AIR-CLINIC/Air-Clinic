@@ -2,7 +2,7 @@
 *Air-Clinic is a project aimed at providing quick, accessible, affordable global healthcare all round the clock. We are utilizing the benefits of the steem blockchain to bootstrap the growth of the project and provide a valuable service to steemians (& beyond).*
 
 ---
-**Name:** myAIRCLINIC.COM (FRIENDLY WEBSITE)<br/>
+**Name:** [myAIRCLINIC.COM (FRIENDLY WEBSITE)](https://myairclinic.com)<br/>
 **Contributors:** Dr. George Edeh <br/>
 **Programmed with:** HTML, CSS, & JAVASCRIPT<br/>
 **Dependencies:** Steemit Widgets, Finally Comments, Jquery, Font Awesome, <br/>
