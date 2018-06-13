@@ -19,14 +19,16 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 35%;
 }
 
 li {
+    
     }
 
 li a {
     display: block;
-    width: 35%;
+    
     text-align: center;
     text-decoration: none;
     background-color: rgb(3, 127, 250);;
@@ -88,16 +90,11 @@ a { color: rgb(221, 14, 14); text-decoration: none; }
 /* Contents */
 
 .contents {
-    background-color: grey;
-    width: 100%;
+    
     height: 20%;
     color: white;
     margin-top: 0%;
-    border: solid rgb(3, 127, 250) 2px;
-    outline: solid rgb(3, 127, 250) 10%;
-    outline-offset: 10%;
-    border-radius: 5px;
-
+    
 
 }
 
@@ -108,16 +105,19 @@ h1 {
     text-align: center;
     border-radius: 5px;
 }
-
-
-/* Container */
-#about {
-    border: rgb(219, 10, 10) 2px solid;
+@media only screen and (max-width: 600px)
+    {
+#hidden {
+    display: none
 }
+    }
+/* Container */
+
 
 span {
     background-color: rgb(3, 127, 250);
     border: whitesmoke 2px outset;
+    
 }
 
 
@@ -130,7 +130,8 @@ h4 {
 }
 
 #services {
-    background-color: grey;
+    background-color: rgb(175, 177, 179);
+    opacity: 0.99;
 }
 
 
@@ -138,4 +139,41 @@ h4 {
 .fas fa-camera-retro {
     color: grey;
     font-size: 3em; 
+}
+
+/* Media Query Breakpoint to optimize for desktop */
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 }
