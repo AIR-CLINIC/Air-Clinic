@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial scale=1"> 
     <title>AIR CLINIC | Enjoy Online Healthcare!</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="air-clinic.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="air-clinic.js"></script>
 </head>
 
 <body style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
 
-    <div class= "nav" id="nav">
+    <div class= "nav" class="col-4" id="nav">
         <div class=>
             <img src="https://media.discordapp.net/attachments/452425320855896065/454583612952805376/AIR_CLINIC_LOGOTransparent.png?width=301&height=301" width="158rem" height"50rem">
             <!-- <h3 class="special"  style="width: 42%; height: 5%; border: outset 2px grey; border-radius: 5px;">AIR-CLINIC</h3> --->
         </div>
-
         <ul>
             <li><a style="font-size: 0.8rem" href="#Home" class="active"><img src="http://assets.stickpng.com/thumbs/588a667fd06f6719692a2d19.png" height="18px" width="20px">HOME</a></li>
             <li><a style="font-size: 0.8rem" href="#About" class="active" type="button" onclick="smoothScroll(document.getElementById('about'))"><img src="https://dataworks.calderdale.gov.uk/wp-content/themes/theme_calderdale/img/transparency.png" height="18px" width="20px">ABOUT</a></li>
@@ -35,11 +34,18 @@
         <center><a class="fa fa-arrow-down fa-2x" href="#contents"></a></center>
     </div>
     <div class="contents" id="contents">
+            <div class="col-6" id="hidden">
+                <img src="https://wrm5sysfkg-flywheel.netdna-ssl.com/wp-content/uploads/2014/06/Medical-Apps-in-Healthcare.png" height="142rem" width="100%">
+            </div>
+
+            <div class="col-6" style="background-color: grey; border: dodgerblue 3px solid; border-radius: 5px;">
             <h1>ENJOY ONLINE HEALTHCARE!</h1>
-            <p><i><b>A brand new interface for accessing quality medical services with ease...</b></i></p>
+            <p style="color: black"><i><b>A brand new interface for accessing quality medical services with ease...</b></i></p>
             <a class="fa fa-ambulance fa-2x" href="https://discord.gg/rqded5m"></a>
             <a class="fa fa-angle-double-left fa-2x" href="https://discord.gg/rqded5m">Click to Start</a>
-    </div>
+            </div>
+
+</div>
 
     <hr>
     <div class="arrow-bounce">
@@ -48,24 +54,30 @@
 
 
     <div class= "container">
-        <section id="about" style="background-color: lightgrey">
-            <h3 style="background-color: grey">WHO WE ARE</h3>
-            <p><b>We are</b> a modern healthcare facility utilizing the benefits of mobile blockchain technology to bootstrap health service delivery.<br/><span><a href="https://steemit.com/introduceyourself/@air-clinic/introducing-air-clinic-the-first-healthcare-service-powered-by-steem" target="_blank">Read More...</a></span> </p>
+        <section id="about" style="background-color: lightgrey; padding: 5px;">
+            <h3 style="background-color: grey;">WHO WE ARE</h3>
+            <div class="col-4">
+            <p><b>We are</b> a modern healthcare facility utilizing the benefits of mobile blockchain technology to bootstrap health service delivery.<span><a href="https://steemit.com/introduceyourself/@air-clinic/introducing-air-clinic-the-first-healthcare-service-powered-by-steem" target="_blank">Read More...</a></span> </p>
             <img src="https://www.biospectrumindia.com/uploads/articles/1-10370.jpg" alt="blockchain-healthcare" width="100%" height="300px">
-            <hr>
-            <hr>
-            <p><b>Our Clients</b> can enjoy easy access to professional help for all kinds of health problems. Daily Health discussions and tips on lifestyle, food, sex, hygiene etcz are passed across to members.</p>
-            <img src="http://adionfg.com/wp-content/uploads/2014/12/Get-Your-Free-Health-Insurance-Quote-Now.jpg" alt="consult our doctors" width="100%" height="300px">
-            <hr>
-            <hr>
-            <p><b>Health experts</b> can use our modern web interface to share their knowledge, take medical consultations and start earning for it.</p>
-            <img src="https://pctechmag.com/wp-content/uploads/2014/08/make-money-online.jpg" alt="provide-healthcare" width="100%" height="300px">
-        </section>
-        <div class="arrow-bounce">
-                <center><a class="fa fa-arrow-down fa-2x" href="#services"></a></center>
+            
             </div>
-        <hr>
-        <section id= "services" class="row"  style="color: white">
+            <div class="col-4">
+            <p><b>Our Clients</b> can enjoy easy access to professional help for all kinds of health problems. Daily Health discussions and tips on lifestyle, food, sex, hygiene etcz are passed across to members.</p>
+            <img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/4ZrVLdVKeijzurndz/videoblocks-medicine-people-and-healthcare-concept-happy-female-doctor-with-papers-and-laptop-computer-calling-on-phone-at-hospital_rgwlfswghte_thumbnail-full01.png" alt="consult our doctors" width="100%" height="300px">
+            
+            </div>
+            <div class="col-4">
+            <p><b>Health experts</b> can use our modern web interface to share their knowledge, take medical consultations and start earning for it.</p>
+            <img src="http://cdn.thefiscaltimes.com/cdn/farfuture/qz-9lMXbXHYSdWoPkUJ0OELkBxkigd54cyR0rl7mBSg/mtime:1496928646/sites/default/files/styles/article_hero_image/public/07122011_States_Doctor_slideshow.jpg?itok=KVFfuzjh" alt="provide-healthcare" width="100%" height="300px">
+            </div>
+        </section>
+    </div>
+    
+    <div class="arrow-bounce">
+        <center><a class="fa fa-arrow-down fa-2x" href="#services"></a></center>
+    </div>
+    <hr>
+    <section id= "services" class="row"  style="color: white">
             <h3>WHAT WE DO</h3>
             <div class="col-6" style="border: 2px dodgerblue solid; outline: dodgerblue outset 2px; outline-offset: 30%">
                 <h4>CHAT A DOCTOR</h4>
@@ -148,10 +160,10 @@
 
     <div class="trust" id="trust">
         <h3>Trusted By</h3>
-        <img src="https://steemwhales.com/pic/steem.png" alt="steem blockchain" width="32%">
-        <img src="data:image/png;base64,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" alt="sndbox" width="32%">
-        <img src="https://steemitimages.com/DQmSbGWw49HH6bmqDYkM2vZF4ERUQotQYxRpf1SqUH5oeNn/STEEM%20NIGERIA%20LOGO.png" alt="ACOF" width= "32%">
-        <img src="https://steemitimages.com/0x0/https://i.imgur.com/MXQ4Adv.png" alt="YouAreHOPE" width="100%">
+        <img src="https://steemwhales.com/pic/steem.png" alt="steem blockchain" height= "120rem" width="32%">
+        <img src="data:image/png;base64,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" alt="sndbox" height= "120rem" width="32%">
+        <img src="https://steemitimages.com/DQmSbGWw49HH6bmqDYkM2vZF4ERUQotQYxRpf1SqUH5oeNn/STEEM%20NIGERIA%20LOGO.png" alt="Steem-Nigeria" height= "120rem" width= "32%">
+        <img src="https://steemitimages.com/0x0/https://i.imgur.com/MXQ4Adv.png" alt="YouAreHOPE" height= "120rem" width="100%">
     </div>
 
     <hr>
