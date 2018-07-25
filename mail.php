@@ -1,60 +1,87 @@
 <?php
-
-/* =====================================================
- * change this to the email you want the form to send to
- * ===================================================== */
-
-if(isset($_POST['email']))
-{
-$email_to = "airsteemclinic@gmail.com"; 
-$email_from = $_POST['email']; // must be different than $email_from 
-$email_subject = 'Suggestion Box From $name';
-
-    function return_error($error)
-    {
-        echo json_encode(array('success'=>0, 'message'=>$error));
+if(isset($_POST['email'])) {
+ 
+    // EDIT THE 2 LINES BELOW AS REQUIRED
+    $email_to = "airsteemclinic@gmail.com";
+    $email_subject = "Submissions From Website";
+ 
+    function died($error) {
+        // your error code can go here
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "These errors appear below.<br /><br />";
+        echo $error."<br /><br />";
+        echo "Please go back and fix these errors.<br /><br />";
         die();
     }
-
-    // check for empty required fields
-    if (!isset($_POST['name']) ||
+ 
+ 
+    // validation expected data exists
+    if(!isset($_POST['name']) ||
         !isset($_POST['email']) ||
-        !isset($_POST['message']))
-    {
-        return_error($lang['MAIL_ERROR_9']);
+        !isset($_POST['subject']) ||
+        !isset($_POST['message'])) {
+        died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
-
-    // form field values
+ 
+     
+ 
     $name = $_POST['name']; // required
-    $email = $_POST['email']; // required
+    $email_from = $_POST['email']; // required
+    $subject = $_POST['subject']; // not required
     $message = $_POST['message']; // required
-
-    // form validation
+ 
     $error_message = "";
-
-    // name
-    $name_exp = "/^[a-z0-9 .\-]+$/i";
-	
-    if (!preg_match($name_exp,$name))
-    {
-        $this_error = 'Please enter a valid name.';
-        $error_message .= ($error_message == "") ? $this_error : "<br/>".$this_error;
-    }        
-
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-    if (!preg_match($email_exp,$email))
-    {
-        $this_error = 'Please enter a valid email address.';
-        $error_message .= ($error_message == "") ? $this_error : "<br/>".$this_error;
-    } 
-
-    // if there are validation errors
-    if(strlen($error_message) > 0)
-    {
-        return_error($error_message);
+ 
+  if(!preg_match($email_exp,$email_from)) {
+    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+  }
+ 
+    $string_exp = "/^[A-Za-z .'-]+$/";
+ 
+  if(!preg_match($string_exp,$name)) {
+    $error_message .= 'The Name you entered does not appear to be valid.<br />';
+  }
+ 
+  
+  if(strlen($message) < 2) {
+    $error_message .= 'The message you entered does not appear to be valid.<br />';
+  }
+ 
+  if(strlen($error_message) > 0) {
+    died($error_message);
+  }
+ 
+    $email_message = "Form details below.\n\n";
+ 
+     
+    function clean_string($string) {
+      $bad = array("content-type","bcc:","to:","cc:","href");
+      return str_replace($bad,"",$string);
     }
-
-    // prepare email message
+ 
+     
+ 
+    $email_message .= "Name: ".clean_string($name)."\n";
+    $email_message .= "Email: ".clean_string($email_from)."\n";
+    $email_message .= "Telephone: ".clean_string($subject)."\n";
+    $email_message .= "Comments: ".clean_string($message)."\n";
+ 
+// create email headers
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);  
+?>
+ 
+<!-- include your own success html here -->
+ 
+Thank you for contacting us. We are absolutely excited to read what you have to say. Expect to hear from us soon.
+ 
+<?php
+ 
+}
+?>
     $email_message = "Form details below.\n\n";
 
     function clean_string($string)
